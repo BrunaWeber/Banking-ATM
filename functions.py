@@ -5,7 +5,7 @@ users_list = user.users_list
 def change_pin():
     #input("Are you sure you want to change your PIN [y/n]? ")
     print("You are going to change your PIN...")
-    ###users_list.user.update
+    user.update('pin')
     new_pin_1= input("Enter a 4 digit number: ")
     if len(new_pin_1) == 4 and new_pin_1.isdigit():
         new_pin_2 = input("Reenter the same PIN as above: ")
@@ -13,10 +13,10 @@ def change_pin():
         print("Error! Enter a Valid PIN...")
 
     if new_pin_1 == new_pin_2:
-        pin_changed = print(repr(new_pin_2))
+        pin_changed = print(new_pin_2)
         print(f"You have changed your Pin. Your Pin now is {pin_changed}")   
      
-#change_pin()
+change_pin()
 
 ###FUNCTION TO WITHDRAWAL MONEY###
 def withdrawal_money():

@@ -2,6 +2,7 @@ import os
 import user
 import menus
 
+
 users_list = user.users_list
 current_user = ""
 
@@ -13,17 +14,18 @@ def user_login():
     print("*** USER LOGIN ***")
     print("===================\n")
     
-    username=input("Please enter your User ID:  ")
+    username=input("Please enter your User ID:  ")#after this read that the access is denied....?????????????
     
-    user_fname='first_name'
-    user_lname='last_name'
     found_user=False
 
     for user in users_list:
-        if (user[int('user_id')]==username): #after this read that the access is denied....?????????????
+        #print(user) # use it to test if print user info
+        if (int(user['user_id'])==int(username)): 
+            #print("print step 2") ### used to test
             password=input("Please enter your 4 digits Pin: ")
-            if (user[int('pin')]==password): 
+            if (int(user['pin'])==int(password)): 
                 found_user=True
+                global current_user
                 current_user=user
                 continue
             else:
@@ -31,20 +33,12 @@ def user_login():
                 break
 
     if (found_user==True):
-        print (f"Welcome to your Bank Account {user['first_name']}!\n Your access is granted...")
-        menus.usermenu(current_user)
+        #clear_screen()
+        print (f"{user['first_name']} {user['last_name']}, Your access is granted...")
+        menus.display_user_menu(current_user)
     else:
         print ("Access Denied. Please Try Again.")
     return
                 
 
 user_login() 
-   
-
-
-
-
-
-            
-                
-

@@ -1,6 +1,6 @@
 # Data Types:
-# user_id - integer
-# pin - integer
+# user_id - string
+# pin - strin
 # first_name - string
 # last_name - string
 # balance - float
@@ -37,14 +37,4 @@ def add_users():
                        "last_name": "Cooper", 
                        "balance": 850.00, 
                        "overdraft": False})
-
-def display_users():
-    print("Library users:")
-    print("=====================================================================================================")
-    print(f"Users ID".ljust(12), "First Name".ljust(20), "Last Name".ljust(20), "Balance".ljust(12), "Overdraft".ljust(5)) 
-    print("=====================================================================================================")
-    
-    for user in users_list:
-        print(f"{str(user['user_id'].ljust(12))} {user['first_name'].ljust(20)} {user['last_name'].ljust(20)} {str(user(['balance'].ljust(12)))} {str(user['BorrewedBooks']).ljust(5)}") 
-
-#display_users()
+add_users()

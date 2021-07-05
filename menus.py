@@ -1,6 +1,6 @@
 import os
 import user
-import functions
+#import functions
 
 user_list = user.users_list
 
@@ -8,7 +8,8 @@ def clear_screen():
     os.system('cls')
 
 def display_user_menu(user):
-    #clear_screen()
+    clear_screen()
+    print (f"{user['first_name']} {user['last_name']}, Welcome to your Bank Account! Your access is granted...\n")
     print("=========================")
     print("*** USER MENU OPTIONS ***")
     print("=========================\n")
@@ -24,7 +25,7 @@ def display_user_menu(user):
     clear_screen()
     if(option == "1"):
         print("You are on Option 1!\n")
-        functions.change_pin()
+        #functions.change_pin()
         display_user_menu(user)
 
     elif(option == "2"):
@@ -53,17 +54,22 @@ def display_user_menu(user):
     
     elif(option == "6"):
         print("Thank you and Bye!")
-
+    
     else:
-        print("Please return to menu and select an option from 1 to 6...")
-        input("Return to continue...")
-        display_user_menu(user)
-
+        answer=str(input("Invalid Entry..Do you want to try again? [Y/N]"))
+        answer=answer.upper()
+        if (answer=="Y"):
+            display_user_menu(user)
+        else:
+            print("Thank you...See you soon...")
+            exit()
+    
         
 #display_user_menu(user)    
 
 
 def display_help_menu():
+    clear_screen()
     print("=========================")
     print("*** HELP MENU OPTIONS ***")
     print("=========================\n")
@@ -73,3 +79,4 @@ def display_help_menu():
     print("4. View Statement HELP.")
     print("5. Exit Menu.")
 
+#display_help_menu()
