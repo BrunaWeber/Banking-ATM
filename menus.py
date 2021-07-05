@@ -1,6 +1,6 @@
 import os
 import user
-#import functions
+import functions
 
 user_list = user.users_list
 
@@ -25,18 +25,18 @@ def display_user_menu(user):
     clear_screen()
     if(option == "1"):
         print("You are on Option 1!\n")
-        #functions.change_pin()
+        functions.change_pin()
         display_user_menu(user)
 
     elif(option == "2"):
         print("You selected Option 2!\n")
-        #function.withdrawal_money()
+        functions.withdrawal_money()
         #input("Return to continue...")
         display_user_menu(user)
         
     elif(option == "3"):
         print("You selected Option 3!\n")
-        #function.lodge_money()
+        functions.lodge_money()
         input("Return to continue...")
         display_user_menu(user)
             

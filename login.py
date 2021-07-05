@@ -14,7 +14,7 @@ def user_login():
     print("*** USER LOGIN ***")
     print("===================\n")
     
-    username=input("Please enter your User ID:  ")#after this read that the access is denied....?????????????
+    username=input("Please enter your User ID:  ")
     
     found_user=False
 
