@@ -1,6 +1,5 @@
 import os
 import user
-#from menus import *
 import menus 
 
 
@@ -11,6 +10,7 @@ def clear_screen():
     os.system('cls')
   
 def user_login():
+    print("\nLOGIN ONSCREEN HELP --> The information that is requested for you are:\nUSER ID: 4 digits --> This information you receive when you aopen your account.\nPIN: 4 digits --> You have created it on the day that you open your account, you might change it on the APP.\n\n")
     print("===================")
     print("*** USER LOGIN ***")
     print("===================\n")
@@ -20,9 +20,7 @@ def user_login():
     found_user=False
 
     for user in users_list:
-        #print(user) # use it to test if print user info
         if (int(user['user_id'])==int(username)): 
-            #print("print step 2") ### used to test
             password=input("Please enter your 4 digits Pin: ")
             if (int(user['pin'])==int(password)): 
                 found_user=True
