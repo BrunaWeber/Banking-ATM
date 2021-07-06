@@ -1,7 +1,7 @@
 import user
 
 users_list = user.users_list
-transactions_list = user.add_transactions()  
+transactions_list = user.transactions_list 
 
 ####FUNCTION TO CHANGE PIN###
 def change_pin(user):
@@ -71,6 +71,16 @@ def view_statement(user):
     print("\n")
 #view_statement()
 
-    #for transaction in transactions_list:
-        #print()
+def view_last_transactions(transaction):
+    print("Last Transactions Statement:")
+    print("======================================================================================")
+    print(f"Date".ljust(15), "Transaction".ljust(15), "Amount".ljust(20), "Balance".ljust(20))
+    print("======================================================================================")
+    
+    for transaction in transactions_list:  
+        print(f"{transaction['Date'].ljust(15)} {transaction['transaction'].ljust(15)} €{str(transaction['amount']).ljust(19)} €{transaction(user['balance_after']).ljust(19)}") 
+        print("\n")
+
+    
+        
    

@@ -3,7 +3,8 @@ import user
 import functions
 
 user_list = user.users_list
-transactions_list = user.add_transactions()  
+
+#transactions_list = user.transactions_list
 
 def clear_screen():
     os.system('cls')
@@ -45,6 +46,7 @@ def display_user_menu(user):
     elif(option == "4"):
         print("You selected Option 4!\n")
         functions.view_statement(user)
+        #functions.view_last_transactions()
         #functions.display_balance(user) # just use it to test...
         input("Return to continue...")
         display_user_menu(user)
@@ -67,10 +69,7 @@ def display_user_menu(user):
             print(f"Thank you {user['first_name']}...See you soon...")
             exit()
     
-        
 #display_user_menu(user)    
-
-
 
 def display_help_menu(user):
     clear_screen()

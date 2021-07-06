@@ -2,7 +2,7 @@ import os
 import user
 import menus 
 
-
+#transactions_list = user.transactions_list 
 users_list = user.users_list
 current_user = ""
 
@@ -10,7 +10,8 @@ def clear_screen():
     os.system('cls')
   
 def user_login():
-    print("\nLOGIN ONSCREEN HELP --> The information that is requested for you are:\nUSER ID: 4 digits --> This information you receive when you aopen your account.\nPIN: 4 digits --> You have created it on the day that you open your account, you might change it on the APP.\n\n")
+    print("\nLOGIN ONSCREEN HELP --> The information that is requested for you are:\nUSER ID: 4 digits --> This information you received when you open your account.\nPIN: 4 digits --> You have created it on the day that you open your account, you might change it on the APP.\n")
+    print("If you have any problems while on the application, please contact Paramount Programming Customer Service Assistance.\nOur phone is: (88)250-2123 \nEmail: customerhelp@paramountpro.com\n\n")
     print("===================")
     print("*** USER LOGIN ***")
     print("===================\n")

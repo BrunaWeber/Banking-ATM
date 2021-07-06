@@ -85,4 +85,4 @@ def add_transactions():
                        "balance_before": 1050.00, 
                        "balance_after": 950.00})  
 
-#add_transactions()                       
+add_transactions()                       
