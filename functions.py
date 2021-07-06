@@ -1,41 +1,34 @@
-from typing import Match
 import user
 
 users_list = user.users_list
 
 ####FUNCTION TO CHANGE PIN###
 def change_pin():
-    #input("Are you sure you want to change your PIN [y/n]? ")
-    print("You are going to change your PIN...")
-    current_pin=input("First enter your current pin: ")
+    print("You are going to change your PIN...") #--> ok
+    #current_pin=input("First enter your current pin: ")
+    new_pin_1= input("Please, enter your new PIN - 4 digits: ")
     for user in users_list:
-        if (int(user['pin'])==int(current_pin)): 
-            new_pin_1= input("Enter your new PIN - 4 digits: ")###################
-            if len(new_pin_1) == 4 and new_pin_1.isdigit():
-                new_pin_2 = input("Reenter the same PIN as above: ")
-            else:
-                print("Error! Enter a Valid PIN...")
-                ### test because was repeating line 11
-
-        if new_pin_1 == new_pin_2:
-            pin_changed = new_pin_2
-            print(f"You have changed your Pin. Your Pin now is {pin_changed}") 
+        if len(new_pin_1) == 4 and new_pin_1.isdigit():
+            print("Pin1 is digt and has for digits...")######add to check
+            new_pin_2 = input("Reenter the same PIN as above: ") # ----> IT IS BEING REPEATED
+            print(f"pin:{new_pin_1} check pin:{new_pin_2} ")#### add to check
+            if new_pin_1 == new_pin_2:
+                pin_changed = new_pin_2
+                print(f"You have changed your Pin. Your Pin now is {pin_changed}") 
+                (user['pin'])=(pin_changed) #####check it (I TRY DO IT TO STORE THE NEW PIN (PIN_CHANGED INSIDE OF PIN KEY))
             break  
+            #else:
+                #print("The two inputs don't match... Try again...")
         else:
-            print("The two inputs don't match... Try again...")
-                
-    else:
-        print("You are not allowed to change your pin before you enter your current pin.")
-    #for user in users_list:
+            print("Please enter a 4 digit PIN.")
         
-        #user.update(user) 
 #change_pin()
 
 ###FUNCTION TO CHECK THE BALANCE###
 def display_balance():   #after login I can display blance for users to check
     for user in users_list:
         print({user['balance']})
-display_balance()    
+#display_balance()    
 
 
 ###FUNCTION TO WITHDRAWAL MONEY###

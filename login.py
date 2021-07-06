@@ -1,6 +1,7 @@
 import os
 import user
-import menus
+#from menus import *
+import menus 
 
 
 users_list = user.users_list
@@ -41,4 +42,4 @@ def user_login():
     return
                 
 
-user_login() 
+#user_login() 
