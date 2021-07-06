@@ -1,6 +1,6 @@
 # Data Types:
-# user_id - string
-# pin - strin
+# user_id - integer
+# pin - integer
 # first_name - string
 # last_name - string
 # balance - float

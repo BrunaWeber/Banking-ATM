@@ -35,7 +35,8 @@ def user_login():
 
     if (found_user==True):
         #clear_screen()
-        print (f"{user['first_name']} {user['last_name']}, Your access is granted...")
+        print (f"{user['first_name']} {user['last_name']}, Account...")
+        print(f"\nYour Current Balance is: {user['balance']}")
         menus.display_user_menu(current_user)
     else:
         print ("Access Denied. Please Try Again.")

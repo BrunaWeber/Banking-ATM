@@ -1,6 +1,5 @@
 import os
 import user
-#from functions import *
 import functions
 
 user_list = user.users_list
@@ -21,12 +20,12 @@ def display_user_menu(user):
     print("5. Onscreen Help Menu.")
     print("6. Exit Menu.")
 
-    option=input("Please choose an option (1-6): ")
+    option=input("/nPlease choose an option (1-6): ")
 
     clear_screen()
     if(option == "1"):
         print("You are on Option 1!\n")
-        functions.change_pin()
+        functions.change_pin(user)
         input("Return to continue...")
         display_user_menu(user)
 
@@ -55,7 +54,7 @@ def display_user_menu(user):
         display_user_menu(user)
     
     elif(option == "6"):
-        print("Thank you and Bye!")
+        print(f"Thank you {user['first_name']}, and Bye!")
     
     else:
         answer=str(input("Invalid Entry..Do you want to try again? [Y/N]"))
@@ -63,7 +62,7 @@ def display_user_menu(user):
         if (answer=="Y"):
             display_user_menu(user)
         else:
-            print("Thank you...See you soon...")
+            print(f"Thank you {user['first_name']}...See you soon...")
             exit()
     
         
