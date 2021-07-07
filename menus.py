@@ -4,7 +4,7 @@ import functions
 
 user_list = user.users_list
 
-#transactions_list = user.transactions_list
+#transactions_list = user.transactions_list # FOR NEXT VERSION
 
 def clear_screen():
     os.system('cls')
@@ -68,7 +68,8 @@ def display_user_menu(user):
         else:
             print(f"Thank you {user['first_name']}...See you soon...")
             exit()
-    
+            
+#CALLING THE FUNCTION    
 #display_user_menu(user)    
 
 def display_help_menu(user):
@@ -82,7 +83,7 @@ def display_help_menu(user):
     print("4. View Statement HELP.")
     print("5. Exit Menu.")
 
-    option=input("\nPlease choose an option (1-6): ")
+    option=input("\nPlease choose an option (1-5): ")
     clear_screen()
 
     if(option == "1"):
@@ -105,12 +106,12 @@ def display_help_menu(user):
             
     elif(option == "4"):
         print("You selected Option 4!\n")
-        print("You are logged in... To check your statement enter '4'. Here will be displayed your information: First Name, User ID, Current Balance, Overdraft Facilit (FALSE--> you do not have overdraft money.) (TRUE --> you have overdraft money.)")
+        print("You are logged in... To check your statement enter '4'. Here will be displayed your information: First Name, User ID, Current Balance, Overdraft Facility (FALSE--> you do not have overdraft money.) (TRUE --> you have overdraft money.)")
         input("Return to continue...")
         display_help_menu(user)
 
     elif(option == "5"):
-        print(f"Thank you {user['first_name']}, and Bye!")
+        print(f"Thank you {user['first_name']}... You are returning to the main menu.!")
     
     else:
         answer=str(input("Invalid Entry..Do you want to try again? [Y/N]"))
@@ -118,7 +119,7 @@ def display_help_menu(user):
         if (answer=="Y"):
             display_help_menu(user)
         else:
-            print(f"Thank you {user['first_name']}...See you soon...")
+            print(f"Thank you {user['first_name']}... Bye...")
             exit()
 
 

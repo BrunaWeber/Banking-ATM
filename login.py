@@ -2,7 +2,7 @@ import os
 import user
 import menus 
 
-#transactions_list = user.transactions_list 
+#transactions_list = user.transactions_list #NEXT VERSION
 users_list = user.users_list
 current_user = ""
 

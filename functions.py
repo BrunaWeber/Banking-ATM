@@ -3,7 +3,7 @@ import user
 users_list = user.users_list
 transactions_list = user.transactions_list 
 
-####FUNCTION TO CHANGE PIN###
+####FUNCTION TO CHANGE PIN####
 def change_pin(user):
     print(f"This is my currrent pin: {user['pin']}")#Check if this is the current user and its pin
     print("You are going to change your PIN...\n") 
@@ -27,12 +27,10 @@ def change_pin(user):
         
 #change_pin(user)
 
-###FUNCTION TO CHECK THE BALANCE###
+###FUNCTION TO CHECK THE BALANCE### #---> NOT USING IT, JUST TEST
 def display_balance(user):   
     print(f"Balance: €{user['balance']}")
  
-
-
 ###FUNCTION TO WITHDRAWAL MONEY###
 def withdrawal_money(user): #take money but first check if there is funds
     
@@ -71,6 +69,7 @@ def view_statement(user):
     print("\n")
 #view_statement()
 
+#FUNCTION TO PRINT THE TRANSACTIONS # -->IT WILL BE USED IN THE NEXT VERSION
 def view_last_transactions(transaction):
     print("Last Transactions Statement:")
     print("======================================================================================")

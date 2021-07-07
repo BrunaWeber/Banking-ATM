@@ -1,10 +1,11 @@
-# Data Types:
+# DATA TYPES:
 # user_id - integer
 # pin - integer
 # first_name - string
 # last_name - string
 # balance - float
 # overdraft - boolean 
+
 users_list = []
 def add_users():    
     users_list.append({"user_id": 1111, 
@@ -39,6 +40,7 @@ def add_users():
                        "overdraft": False})
 #add_users()
 
+########THIS WILL BE USED IN THE NEXT VERSION############
 transactions_list = []
 
 def add_transactions():  
@@ -85,4 +87,4 @@ def add_transactions():
                        "balance_before": 1050.00, 
                        "balance_after": 950.00})  
 
-add_transactions()                       
+#add_transactions()                       
